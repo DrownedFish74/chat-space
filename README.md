@@ -26,6 +26,7 @@
 ### Association
 - has_many :users throuth: :users_groups
 - has_many :messages
+- has_many :users_groups
 
 ## groups_usersテーブル
 
