@@ -12,6 +12,7 @@
 ### Association
 - has_many :group through: :users_groups
 - has_many :messages
+- has_many :users_groups
 
 ### Index
 - add_index :users, :name
