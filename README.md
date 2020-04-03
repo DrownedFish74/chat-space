@@ -43,8 +43,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|image|text|null: true|
+|text|text||
+|image|text||
 |group|references|null: false, foreign_key: true|
 |user|references|null: false, foreign_key: true|
 
