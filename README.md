@@ -52,5 +52,3 @@
 - belongs_to :user
 - belongs_to :group
 
-### Index
-- add_index :messages, [:text, :image]
