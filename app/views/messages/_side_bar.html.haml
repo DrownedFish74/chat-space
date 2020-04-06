@@ -1,1 +1,15 @@
-サイドバー
+.side-bar__side-header
+  .side-header__user-name ユーザーネーム
+  .side-header__links
+    = link_to "#" do
+      %i.far.fa-edit.add-group{:style => "padding-right: 5px"}>
+    = link_to "#" do
+      %i.fas.fa-cog.user-edit
+
+.side-bar__group-list
+  .group-list__group
+    .group-list__group__name
+      グループ名
+    .group-list__group__top-message
+      トップメッセージ
+

@@ -1,1 +1,30 @@
-チャット
+.main-chat__chat-header
+  .chat-header__group-member
+    .chat-header__group-member__group
+      グループ名
+    %ul.chat-header__group-member__list
+      %li
+        Member
+      %li
+        list2
+  = link_to "Edit", "#", class: "chat-header__edit"
+
+.main-chat__messages
+  .messages__message
+    .messages__message__user
+      .messages__message__user__name
+        名前
+      .messages__message__user__time
+        タイム
+    .messages__message__text
+      テキスト
+
+.main-chat__form
+  %form
+  .form__box
+    %input{type:"text",class: "form__box__text", placeholder:"type a message"}
+    %label{class:"form__box__image"}
+      %i.fas.fa-image.form__box__image__icon
+      %input{type: "file",class:"form__box__image__file"}
+  %input{type:"submit",class:"form__submit"}
+
