@@ -1,0 +1,22 @@
+&__message {
+    height: 123px;
+    padding-top: 35px;
+    &__user {
+        display: flex;
+        padding-bottom: 12px;
+        &__name {
+            color: #333333;
+            font-size: 16px;
+            padding-right: 5px;
+        }
+        &__time {
+            color: #999999;
+            font-size: 12px;
+        }
+    }
+    &__text {
+        padding-bottom: 46px;
+        color: #434a54;
+        font-size: 14px;
+    }
+}
