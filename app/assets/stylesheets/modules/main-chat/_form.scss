@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    .form {
+        &__box {
+            width: 100%;
+            padding-right: 15px;
+            align-items: center;
+            position: relative;
+            &__text {
+                height: 50px;
+                width: 100%;
+                padding: 0 40px 0 10px;
+            }
+            &__image {
+                &__icon {
+                    display: inline-block;
+                    height: 50px;
+                    width: 50px;
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    cursor: pointer;
+                }
+                &__file {
+                    display: none;
+                }
+            }
+        }
+        &__submit {
+            height: 50px;
+            width: 100px;
+            padding: 0 30px;
+            background-color: #38aef0;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}

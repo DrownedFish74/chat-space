@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    .side-header {
+        &__user-name {
+            font-size: 16px;
+            color: $font_color;
+            font-weight: bold;
+            height: 20px;
+        }
+        &__links {
+            .add-group {
+								padding-right: 5px;
+                color: $font_color;
+
+            }
+            .user-edit {
+                color: $font_color;
+            }
+        }
+    }
+}
