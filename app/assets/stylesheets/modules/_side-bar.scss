@@ -1,0 +1,22 @@
+@import 'modules/variables';
+* {
+    box-sizing: border-box;
+    .side-bar {
+        &__side-header {
+            height: 100px;
+            width: 300px;
+            background-color: #253141;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 20px;
+            align-items: center;
+            position: fixed;
+        }
+        &__group-list {
+            margin-top: 100px;
+            padding: 0 20px;
+            height: calc(100vh - 100px);
+            background-color: #2f3e51;
+        }
+    }
+}
