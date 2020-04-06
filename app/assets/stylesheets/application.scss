@@ -1,5 +1,6 @@
 @import "variables.scss";
 @import "reset";
+@import "config/colors";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "modules/side-bar/side-header";
@@ -11,3 +12,4 @@
 @import "modules/side-bar";
 @import "modules/main-chat";
 @import "modules/user";
+@import "modules/flash";
