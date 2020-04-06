@@ -1,0 +1,37 @@
+@import 'modules/variables';
+* {
+    box-sizing: border-box;
+    .main-chat {
+        &__chat-header {
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% - 300px);
+            height: 100px;
+            background-color: #ffffff;
+            border: 1px solid;
+            border-color: #eeeeee;
+            position: absolute;
+            top: 0px;
+            position: fixed;
+            padding: 0px 40px;
+            align-items: center;
+        }
+        &__messages {
+            width: 100%;
+            height: calc(100vh - 90px);
+            margin-top: 100px;
+            background-color: #fafafa;
+        }
+        &__form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            height: 90px;
+            width: calc(100% - 300px);
+            background-color: #d2d2d2;
+            position: absolute;
+            bottom: 0px;
+        }
+    }
+}
