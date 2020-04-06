@@ -2,12 +2,13 @@
     height: 123px;
     padding-top: 35px;
     &__user {
-        display: flex;
         padding-bottom: 12px;
+        display: flex;
         &__name {
+            padding-right: 5px;
             color: #333333;
             font-size: 16px;
-            padding-right: 5px;
+            font-weight: bold;
         }
         &__time {
             color: #999999;

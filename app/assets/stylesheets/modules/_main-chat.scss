@@ -3,33 +3,34 @@
     box-sizing: border-box;
     .main-chat {
         &__chat-header {
-            display: flex;
-            justify-content: space-between;
-            width: calc(100% - 300px);
             height: 100px;
-            background-color: #ffffff;
+            width: calc(100% - 300px);
+            padding: 0px 40px;
             border: 1px solid;
             border-color: #eeeeee;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
             position: absolute;
             top: 0px;
             position: fixed;
-            padding: 0px 40px;
             align-items: center;
         }
         &__messages {
-            width: 100%;
             height: calc(100vh - 90px);
+            width: 100%;
             margin-top: 100px;
+            padding: 0px 40px;
             background-color: #fafafa;
         }
         &__form {
+            height: 90px;
+            width: calc(100% - 300px);
+            padding: 20px 40px;
+            background-color: #d2d2d2;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
-            height: 90px;
-            width: calc(100% - 300px);
-            background-color: #d2d2d2;
             position: absolute;
             bottom: 0px;
         }
