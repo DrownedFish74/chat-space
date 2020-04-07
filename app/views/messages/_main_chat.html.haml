@@ -1,12 +1,15 @@
 .main-chat__chat-header
   .chat-header__group-member
     .chat-header__group-member__group
-      group
+      = @group.name
     %ul.chat-header__group-member__list
       %li
         Member
-      %li
-        list
+        - members = @group.user_ids
+        - members.each do |f|
+          %li
+            - member = User.find(f)
+            = member.name
   = link_to "Edit", edit_group_path(params[:group_id]), class: "chat-header__edit"
 
 .main-chat__messages
