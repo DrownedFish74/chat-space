@@ -1,0 +1,11 @@
+.messages__message
+  - @messages.each do |message|
+    .messages__message__user
+      .messages__message__user__name
+        = message.user.name
+      .messages__message__user__time
+        = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+    .messages__message__text
+      - if message.text.present?
+        = message.text
+      = image_tag message.image.url, class:"messages__message__image" unless message.image.blank?

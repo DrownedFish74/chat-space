@@ -7,24 +7,16 @@
         Member
       %li
         list
-  = link_to "Edit", edit_group_path(id), class: "chat-header__edit"
+  = link_to "Edit", edit_group_path(params[:group_id]), class: "chat-header__edit"
 
 .main-chat__messages
-  .messages__message
-    .messages__message__user
-      .messages__message__user__name
-        name
-      .messages__message__user__time
-        time
-    .messages__message__text
-      text
+  =render @messages
 
 .main-chat__form
-  %form
-  .form__box
-    %input{type:"text",class: "form__box__text", placeholder:"type a message"}
-    %label{class:"form__box__image"}
-      %i.fas.fa-image.form__box__image__icon
-      %input{type: "file",class:"form__box__image__file"}
-  %input{type:"submit",value:"Send",class:"form__submit"}
-
+  =form_for [@group, @message] ,html: { class: "form__box" } do |f|
+    .form__box__top
+      =f.text_field :text, class:"form__box__top__text",placeholder:"type a message"
+      =f.label :image, class:"form__box__top__image" do
+        = icon('fas','image',class:"form__box__top__image__icon")
+        = f.file_field :image,class:"form__box__top__image__file"
+    =f.submit "Send", class:"form__box__submit"
