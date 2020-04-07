@@ -1,19 +1,19 @@
 * {
-    box-sizing: border-box;
-    .side-bar {
-        &__side-header {
-            height: 100px;
-            width: 300px;
-            padding: 0px 20px;
-            background-color: #253141;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        &__group-list {
-            height: calc(100vh - 100px);
-            padding: 0 20px;
-            background-color: #2f3e51;
-        }
+  box-sizing: border-box;
+  .side-bar {
+    &__side-header {
+      height: 100px;
+      width: 300px;
+      padding: 0px 20px;
+      background-color: #253141;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+    &__group-list {
+      height: calc(100vh - 100px);
+      padding: 0 20px;
+      background-color: #2f3e51;
+    }
+  }
 }
