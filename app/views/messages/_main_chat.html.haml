@@ -16,7 +16,7 @@
   =render @messages
 
 .main-chat__form
-  =form_for [@group, @message] ,html: { class: "form__box" } do |f|
+  =form_for [@group, @message] ,html: { class: "form__box" },remote: true do |f|
     .form__box__top
       =f.text_field :text, class:"form__box__top__text",placeholder:"type a message"
       =f.label :image, class:"form__box__top__image" do
