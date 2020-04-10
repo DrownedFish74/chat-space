@@ -6,7 +6,7 @@ $(function(){
                       ${message.user.name}
                     </div>
                     <div class="messages__message__user__time">
-                      ${message.created_at.strftime("%Y年%m月%d日 %H時%M分")}
+                      ${message.time}
                     </div>
                   </div>
                   <div class="messages__message__text">

@@ -11,7 +11,7 @@ before_action :set_group
     if @message.save
       respond_to do |format|
         format.html {redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'}
-        format.json { render json: @message }
+        format.json
       end
     else
       @messages = @group.messages.includes(:user)
