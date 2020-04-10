@@ -15,34 +15,34 @@ $(function(){
     if (message.image){
       html  += `<img class="messages__message__image" src=${message.image}>
               </div>`
-      } else { 
+    } else { 
       html += `</div>`}
     return html;
   }
 
   $('#new_message').on('submit', function(e){
-  e.preventDefault();
-  var formData = new FormData(this);
-  var url = $(this).attr('action')
-  $.ajax({
-    url: url,
-    type: "POST",
-    data: formData,
-    dataType: 'json',
-    processData: false,
-    contentType: false
+    e.preventDefault();
+    var formData = new FormData(this);
+    var url = $(this).attr('action')
+    $.ajax({
+      url: url,
+      type: "POST",
+      data: formData,
+      dataType: 'json',
+      processData: false,
+      contentType: false
+    })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.main-chat__messages').append(html);
+      $('.main-chat__messages').animate({ scrollTop: $('.main-chat__messages')[0].scrollHeight});
+      $('#new_message')[0].reset();
+      $('.form__box__submit').prop('disabled', false);
+    })
+    .fail(function(){
+      alert("メッセージ送信に失敗しました");
+    })
   })
-  .done(function(data){
-    var html = buildHTML(data);
-    $('.main-chat__messages').append(html);
-    $('.main-chat__messages').animate({ scrollTop: $('.main-chat__messages')[0].scrollHeight});
-    $('#new_message')[0].reset();
-    $('.form__box__submit').prop('disabled', false);
-  })
-  .fail(function(){
-    alert("メッセージ送信に失敗しました");
-  })
-})
 })
 
 
