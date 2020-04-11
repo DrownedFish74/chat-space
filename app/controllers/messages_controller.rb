@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
 before_action :set_group
-protect_from_forgery except: :create # searchアクションを除外
+protect_from_forgery except: :create
 
   def index
     @message = Message.new
