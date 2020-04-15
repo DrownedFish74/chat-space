@@ -17,6 +17,7 @@ $(function() {
     `;
     $("#user-search-result").append(html);
   }
+
   function addDeleteUser(name, id) {
     let html = `
     <div class="chat-group-user clearfix" id="${id}">
@@ -25,10 +26,21 @@ $(function() {
     </div>`;
     $(".js-add-user").append(html);
   }
+
   function addMember(userId) {
     let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
     $(`#${userId}`).append(html);
   }
+
+  function addedMember(){
+    let added_users = []
+    let added = $('.js-remove-btn')
+    added.each(function(i,member) {
+      added_users.push($(member).attr("data-user-id"))
+    })
+    return added_users;
+  }
+
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
     $.ajax({
@@ -39,15 +51,21 @@ $(function() {
     })
     .done(function(users) {
       $("#user-search-result").empty();
-
+      addedMember().forEach(function(added_user) {
+        let remove_id = users.findIndex(({id}) => id == (added_user))
+        if (remove_id != -1){
+        users.splice(remove_id,1);
+        }
+      })
       if (users.length !== 0) {
         users.forEach(function(user) {
-          addUser(user);
+          addUser(user)
         });
       } else if (input.length == 0) {
         return false;
       } else {
         addNoUser();
+        return false;
       }
     })
     .fail(function() {
@@ -64,6 +82,7 @@ $(function() {
     addDeleteUser(userName, userId);
     addMember(userId);
   });
+
   $(document).on("click", ".chat-group-user__btn--remove", function() {
     $(this)
       .parent()
